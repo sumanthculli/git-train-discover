@@ -1,7 +1,7 @@
 node{
 
 stage('Checkout'){
-  echo "Start"
+  echo "Start Jenkins Pipeline"
 }
 
 }
