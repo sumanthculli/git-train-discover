@@ -2,7 +2,11 @@ node{
 
 stage('Checkout'){
   echo "Start Jenkins Pipeline"
-  bat "echo ${WORKSPACE}"
+  bat """
+  echo ${WORKSPACE}
+  cd ${WORKSPACE}
+  dir
+  """
 }
 
 }
