@@ -5,7 +5,7 @@ stage('Checkout'){
   echo "Start Jenkins Pipeline"
   bat """
   echo ${WORKSPACE}
-  cd ${WORKSPACE}
+  cd ${WORKSPACE}/report
   dir
   """
   
