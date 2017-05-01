@@ -8,7 +8,8 @@ stage('Checkout'){
   cd ${WORKSPACE}/report
   dir
   """
-  
+  def files = findFiles(glob: '**/index.html') 
+  echo files[0].path
   def file  = readFile 'report/index.html'
   echo file
   writeFile file: 'index.html', text: file
