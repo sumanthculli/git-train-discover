@@ -1,6 +1,7 @@
 node{
 
 stage('Checkout'){
+  git credentialsId: '978081e8-00ab-4bad-ab23-50dd04fb7e50', url: 'https://github.com/sumanthculli/git-train-discover'
   echo "Start Jenkins Pipeline"
   bat """
   echo ${WORKSPACE}
