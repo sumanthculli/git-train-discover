@@ -7,6 +7,9 @@ stage('Checkout'){
   cd ${WORKSPACE}
   dir
   """
+  
+  def file  = readFile 'report/index.html'
+  echo file
 }
 
 }
