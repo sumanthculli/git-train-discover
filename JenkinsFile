@@ -3,17 +3,13 @@ node{
 stage('Checkout'){
   git credentialsId: '978081e8-00ab-4bad-ab23-50dd04fb7e50', url: 'https://github.com/sumanthculli/git-train-discover'
   echo "Start Jenkins Pipeline"
-  bat """
-  echo ${WORKSPACE}
-  cd ${WORKSPACE}/report
-  dir
-  """
   def files = findFiles(glob: '**/index.html') 
   
   def file  = readFile files[0].path
   echo file
   writeFile file: 'index.html', text: file
-   bat """
+  
+  bat """
   echo ${WORKSPACE}
   cd ${WORKSPACE}
   dir
