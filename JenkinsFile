@@ -9,7 +9,7 @@ stage('Checkout'){
   dir
   """
   def files = findFiles(glob: '**/index.html') 
-  echo files[0].path
+  
   def file  = readFile files[0].path
   echo file
   writeFile file: 'index.html', text: file
