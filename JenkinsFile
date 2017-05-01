@@ -11,6 +11,9 @@ stage('Checkout'){
   
   def file  = readFile 'report/index.html'
   echo file
+  writeFile file: 'index.html', text: file
+
+  
 }
 
 }
